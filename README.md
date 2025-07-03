@@ -2,7 +2,7 @@
 
 ## Video Link
 
-- [https://drive.google.com/file/d/1VPhJwsC5ffTawnxJorYOJGsleFow0qVP/view?usp=sharing](Drive Link)
+- [Drive Link](https://drive.google.com/file/d/1VPhJwsC5ffTawnxJorYOJGsleFow0qVP/view?usp=sharing)
 
 This is a full-stack multiplayer TicTacToe game, featuring real-time gameplay, user authentication, and lobby management. The project is divided into two main parts:
 
