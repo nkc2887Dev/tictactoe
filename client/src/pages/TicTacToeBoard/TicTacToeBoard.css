@@ -1,0 +1,148 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, #375461, #000000);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    height: 100%;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 26px;
+    overflow: hidden;
+    animation: glowBoard 3s ease infinite;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #7aa9c987;
+    color: #fff;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 27px;
+}
+
+.cell:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.cell.animated {
+    animation: scale 0.3s ease;
+}
+
+.winner {
+    background-color: #2ecc71;
+    color: #fff;
+    animation: glowWinner 1s ease infinite;
+}
+
+.draw {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.cell.disabled {
+    pointer-events: none; /* Disable further clicks on the cell */
+}
+
+.blur {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    transition: filter 0.5s ease; /* Add a smooth transition effect */
+}
+
+/* #scoreboard {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeInScoreboard 1s ease forwards;
+}
+
+#score-x, #score-o {
+    margin: 0 10px;
+    padding: 5px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #219352;
+    transform: scale(1.1) rotate(360deg);
+} */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glowBoard {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px #180000, 0 0 40px #793737, 0 0 60px #462ecc;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes glowWinner {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px #2ecc71, 0 0 40px #2ecc71, 0 0 60px #2ecc71, 0 0 80px #2ecc71;
+    }
+}
+
+@keyframes fadeInScoreboard {
+    to {
+        opacity: 1;
+    }
+}

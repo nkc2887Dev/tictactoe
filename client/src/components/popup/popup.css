@@ -1,0 +1,16 @@
+.tooltip {
+    position: fixed; /* Position the tooltip absolutely in the center of the screen */
+    top: 56%;
+    transform: translate(-50%, -50%); /* Center the tooltip within viewport */
+    background-color: #000000ab; /* Tooltip background color */
+    border: 1px solid #ccc; /* Tooltip border */
+    padding: 10px; /* Tooltip padding */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Tooltip shadow */
+    z-index: 999; /* Ensure tooltip is above other elements */
+    border-radius: 22px;
+    min-width: 214px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: fffffe;
+  }

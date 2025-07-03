@@ -1,0 +1,199 @@
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #ecf0f1; /* Changed background color */
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    to right,
+    #404241,
+    #000000
+  ); /* Changed background gradient */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.navbar {
+  flex: 0 0 16%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    #404241,
+    #000000
+  ); /* Changed background gradient */
+  color: #2d3436; /* Changed text color */
+  overflow: hidden;
+  border-right: 10px solid;
+}
+
+.upsidenavbar,
+.downsidenavbar {
+  /* border: 3px solid #2c3e50; */
+  transition: border 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border: 3px solid #3498db;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("https://picsum.photos/200/300");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover .profile-pic {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic-name {
+  font-size: 22px;
+  margin-top: 8px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.profile:hover .profile-pic-name {
+  color: #3498db;
+}
+
+.profile-edit-btn,
+.lobby,
+.user-game-details,
+.user-game-details-win,
+.user-game-details-loss,
+.user-game-details-tie,
+.logout-btn {
+  height: 40px;
+  width: 148px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    transform 0.3s ease;
+
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.5vw;
+}
+
+.profile-edit-btn {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+
+.user-game-details,
+.user-game-details-win,
+.user-game-details-loss,
+.user-game-details-tie{
+  border: 3px solid #2d28286b;
+  font-size: 17px;
+  background-color: #81818142;
+  animation: pulse 1.5s infinite;
+  color: #ffffff;
+}
+
+.lobby,
+.logout-btn {
+  border: 3px solid #ffffff6b;
+    font-size: 20px;
+    background-color: #0c20792e;
+    color: #ffffff;
+    /* animation: pulse 1.5s infinite;*/
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.profile-edit-btn:hover,
+.lobby:hover,
+.logout-btn:hover {
+  transform: translateY(-3px);
+}
+
+.profile-edit-btn:hover,
+.lobby:hover {
+  background-color: #27ae60;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.downsidenavbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.outlayer {
+  flex: 1;
+  background: linear-gradient(to right, #ecf0f1, #f9f9f9);
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .upsidenavbar,
+  .downsidenavbar {
+    width: 100%;
+  }
+
+  .profile-pic {
+    margin: 10px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}

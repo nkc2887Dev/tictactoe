@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(3 9 22)
+}
+
+.login-form .login-title {
+  width: 29rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+
+.login-form form {
+  border: 1px solid rgb(0, 0, 0);
+  width: 29rem;
+  font-weight: bold;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  background-color: white;
+}
+
+.login-form form div {
+  margin-top: 3rem;
+  padding: 0 10%;
+}
+
+.login-form form .email-username-input input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.login-form form .password-input input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+.login-form form .login-btn button {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-radius: 38px;
+  font-weight: 700;
+  background-color: #4bb7dc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form form .forgot-password-div a {
+  text-decoration-line: none;
+}
+
+.login-form form .register-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 49px;
+}
+.register-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 49px;
+}
+
+.login-form form .register-page-link p span {
+  font-weight: bold;
+  cursor: pointer;
+  color: #fa0000;
+  font-style: italic;
+}
+.register-page-link p span {
+  font-weight: bold;
+  cursor: pointer;
+  color: #fa0000;
+  font-style: italic;
+}
+
+.login-form form .forgot-password-div div {
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-form {
+    padding: 10px; /* Add padding to the form container */
+  }
+
+  .login-form .login-title {
+    width: 100%;
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .login-form form {
+    width: 100%;
+  }
+
+  .login-form form div {
+    padding: 0 5%; /* Adjust padding for smaller screens */
+  }
+
+  .login-form form .email-username-input input,
+  .login-form form .password-input input {
+    padding: 0.8rem; /* Adjust padding for smaller screens */
+  }
+
+  .login-form form .login-btn button {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .login-form form .register-page-link {
+    padding-bottom: 20px; /* Adjust padding for smaller screens */
+  }
+}

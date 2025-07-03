@@ -1,0 +1,25 @@
+.lobby-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 337px;
+}
+
+.lobby-card img {
+  width: 100%;
+  height: auto;
+}
+
+.lobby-card .card-content {
+  padding: 16px;
+}
+
+.lobby-card .card-content h2 {
+  margin-top: 0;
+}
+
+.lobby-card .card-content p {
+  margin-bottom: 0;
+}
